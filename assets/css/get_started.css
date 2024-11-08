@@ -1,0 +1,64 @@
+
+/* * means "select everything" */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* This sets the height of both the body and html elements to 100% of the viewport, ensuring that the background image covers the entire page. */
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    background-image: url('../images/get_started_bg.jpg');
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* The .overlay class adds a semi-transparent black layer on top of the background image, which helps the white text and button stand out more. */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    color: white;
+    z-index: 1;
+}
+/* z-index: 1 ensures the content is on top of the overlay. */
+
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.get-started-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: red;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.get-started-btn:hover {
+    background-color: #ff3333;
+}

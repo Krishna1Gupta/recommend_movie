@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/recommend_movie/assets/css/signup_page_1.css">
+    <script src="/recommend_movie/assets/js/signup_page_1.js"></script>
+</head>
+<body>
+    <div class="background">
+        <div class="signup-form">
+            <h2>Sign Up</h2>
+            <h3>Your Basic Info</h3>
+            <form onsubmit="submitBasicInfo(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                
+                <div class="age">
+                    <label>Age:</label>
+                    <label>
+                        <input type="radio" id="under16" name="age" value="0" required> 
+                        <!-- 0 means not an adult -->
+                        Under 16
+                    </label>
+                    <label>
+                        <input type="radio" id="over16" name="age" value="1">
+                        <!--1 means an adult -->
+
+                        Over 16
+                    </label>
+                </div>
+
+
+                <div class="gender">
+                    <label>Gender:</label>
+                    <label>
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        Male
+                    </label>
+                    <label>
+                        <input type="radio" id="female" name="gender" value="female"> Female
+                    </label>
+                </div>
+
+                <button type="submit" class="next-btn">Next</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!-- The browser treats all radio buttons with the same name as a group, and it only requires one of them to be selected to pass the validation if required is applied to any of them. Hence, no error will occur if the user selects "Over 16" while "Under 16" is marked required. -->
